@@ -3,9 +3,9 @@ entries:
   kube-shodan:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2019-10-27T22:17:56.343949701Z"
+    created: "2019-10-27T22:21:38.675262358Z"
     description: A Helm chart to deploy kube-shodan
-    digest: 3c82ab392e6d3ca6ecd1ce93c9e5ff8cc384b2a2bbd625e530860fa483d3a079
+    digest: 4f0374f79e799e257003809c9ae2441673b242e602e58d5f6116444515a7236b
     keywords:
     - shodan
     - security
@@ -18,4 +18,4 @@ entries:
     urls:
     - kube-shodan-0.1.1.tgz
     version: 0.1.1
-generated: "2019-10-27T22:17:56.342925886Z"
+generated: "2019-10-27T22:21:38.674309051Z"
