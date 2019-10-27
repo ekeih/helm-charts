@@ -1,2 +1,21 @@
 apiVersion: v1
 entries:
+  kube-shodan:
+  - apiVersion: v1
+    appVersion: 0.0.2
+    created: "2019-10-27T21:42:15.003579073Z"
+    description: A Helm chart to deploy kube-shodan
+    digest: ef288b22bfa4f8d68c84b735df604007b02b74e4b7c33480411c948b800980e1
+    keywords:
+    - shodan
+    - security
+    - audit
+    maintainers:
+    - name: Max Rosin
+    name: kube-shodan
+    sources:
+    - https://github.com/ekeih/kube-shodan
+    urls:
+    - kube-shodan-0.1.1.tgz
+    version: 0.1.1
+generated: "2019-10-27T21:42:15.002840177Z"
