@@ -5,7 +5,7 @@ metadata:
   name: {{ template "velero-pvc-watcher.fullname" . }}
   namespace: {{ $.Release.Namespace }}
   labels:
-    app: {{ template "velero-pvc-watcher.name" . }}
+    app.kubernetes.io/name: {{ template "velero-pvc-watcher.name" . }}
 {{ include "velero-pvc-watcher.labels" . | indent 4 }}
 spec:
   endpoints:
@@ -24,8 +24,8 @@ spec:
 {{- end }}
   selector:
     matchLabels:
-      app: {{ template "velero-pvc-watcher.name" . }}
-      release: {{ $.Release.Name | quote }}
+      app.kubernetes.io/name: {{ template "velero-pvc-watcher.name" . }}
+      app.kubernetes.io/instance: {{ $.Release.Name | quote }}
   namespaceSelector:
     matchNames:
       - {{ $.Release.Namespace | quote }}
