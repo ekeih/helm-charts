@@ -3,9 +3,9 @@ entries:
   kube-shodan:
   - apiVersion: v1
     appVersion: 0.0.2
-    created: "2019-11-15T19:50:30.846101534Z"
+    created: "2019-11-15T21:01:38.739953243Z"
     description: A Helm chart to deploy kube-shodan
-    digest: 9ac3474eee3eb6b840e9f6d2f09d51eba7e3f91a347133e38396c9ceeddb9386
+    digest: 9e4da462fd229f39bf44c90176298dff252a78b32aa4b1028da03798c728ea7a
     keywords:
     - shodan
     - security
@@ -20,12 +20,21 @@ entries:
     version: 0.1.1
   velero-pvc-watcher:
   - apiVersion: v1
+    appVersion: 0.1.1
+    created: "2019-11-15T21:01:38.740474946Z"
+    description: A Helm chart for velero-pvc-watcher
+    digest: 82e2a347df54045350b534fb2b43f548fad6070323ea042241fe295d53acb31a
+    name: velero-pvc-watcher
+    urls:
+    - velero-pvc-watcher-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     appVersion: 0.1.0
-    created: "2019-11-15T19:50:30.846439933Z"
+    created: "2019-11-15T21:01:38.740208744Z"
     description: A Helm chart for velero-pvc-watcher
     digest: 1d0219de67962811c9cc569dd4f73bd0227037df323111fea5622c0959618d00
     name: velero-pvc-watcher
     urls:
     - velero-pvc-watcher-0.1.0.tgz
     version: 0.1.0
-generated: "2019-11-15T19:50:30.845544335Z"
+generated: "2019-11-15T21:01:38.739451439Z"
