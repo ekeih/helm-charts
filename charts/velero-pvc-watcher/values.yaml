@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: quay.io/ekeih/velero-pvc-watcher
-  tag: 0.1.0
+  tag: 0.1.1
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
@@ -38,6 +38,10 @@ metrics:
     prometheus.io/scrape: "true"
     prometheus.io/port: "2112"
     prometheus.io/path: "/metrics"
+  serviceMonitor:
+    enabled: "false"
+    port: "2112"
+    path: "/metrics"
 
 rbac:
   create: true
