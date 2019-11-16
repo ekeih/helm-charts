@@ -16,8 +16,8 @@ spec:
         service: velero-pvc-watcher
         severity: critical
       annotations:
-        summary: "{{ $labels.owner_kind }}/{{ $labels.owner_name }} has PVCs without backups."
-        description: "{{ $labels.owner_kind }}/{{ $labels.owner_name }} in namespace {{ $labels.exported_namespace }} has PVCs without backups."
+        summary: "{{`{{ $labels.owner_kind }}`}}/{{`{{ $labels.owner_name}}`}} has PVCs without backups."
+        description: "{{`{{ $labels.owner_kind }}`}}/{{`{{ $labels.owner_name}}`}} in namespace {{`{{ $labels.exported_namespace}}`}} has PVCs without backups."
 {{- if .Values.metrics.prometheusRules.extraRules }}
 {{ toYaml .Values.metrics.prometheusRules.extraRules | indent 6 }}
 {{- end }}
