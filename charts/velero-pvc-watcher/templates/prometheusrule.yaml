@@ -1,0 +1,24 @@
+{{- if and .Values.metrics.serviceMonitor.enabled .Values.metrics.prometheusRules.enabled -}}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ template "velero-pvc-watcher.fullname" . }}
+  labels:
+{{ include "velero-pvc-watcher.labels" . | indent 4 }}
+spec:
+  groups:
+  - name: velero-pvc-watcher.rules
+    rules:
+    - alert: VeleroBackupMonitor
+      expr: backupmonitor_missing > 0
+      for: 10m
+      labels:
+        service: velero-pvc-watcher
+        severity: critical
+      annotations:
+        summary: "{{ $labels.owner_kind }}/{{ $labels.owner_name }} has PVCs without backups."
+        description: "{{ $labels.owner_kind }}/{{ $labels.owner_name }} in namespace {{ $labels.exported_namespace }} has PVCs without backups."
+{{- if .Values.metrics.prometheusRules.extraRules }}
+{{ toYaml .Values.metrics.prometheusRules.extraRules | indent 6 }}
+{{- end }}
+{{- end -}}

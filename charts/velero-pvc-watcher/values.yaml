@@ -42,6 +42,8 @@ metrics:
     enabled: "false"
     port: "2112"
     path: "/metrics"
+  prometheusRules:
+    enabled: "false"
 
 rbac:
   create: true
